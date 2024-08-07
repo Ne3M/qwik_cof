@@ -1,10 +1,16 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
+import { Header } from "../components/header/header";
+import { ThemeProvider } from "../components/theme/themeProvider";
+
+
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
+      <Header />
+      <ThemeProvider/>
+      
       <div>
         Can't wait to see what you build with qwik!
         <br />
@@ -15,11 +21,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
+  title: "Cofidis.be powered by Qwik",
+  meta: [ 
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Demo CofidisBExQwik",
     },
   ],
 };

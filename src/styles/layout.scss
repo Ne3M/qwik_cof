@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 1rem;
+    min-height: 100vh;
+
+}
+p {
+    margin: 0.5rem 0;
+}
+body {
+    display: block;
+    background: var(--color-background);
+    color: var(--color-text);
+}
+.button {
+    background: var(--color-button-background);
+    border: 2px solid var(--color-button-border);
+    padding: 0.25rem .5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
