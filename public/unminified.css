@@ -154,9 +154,10 @@ body {
     background: var(--color-background);
     color: var(--color-text);
 }
-p {
+/* Obligé ?*/
+/* p {
     margin: 0.5rem 0;
-}
+} */
 a {
     text-decoration: none;
     color: var(--color-text);
