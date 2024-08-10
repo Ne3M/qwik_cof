@@ -9,13 +9,14 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <ThemeProvider/>
       
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
+      <main>
+        <div>
+          Can't wait to see what you build with qwik!
+          <br />
+          Happy coding.
+        </div>
+      </main>
     </>
   );
 });

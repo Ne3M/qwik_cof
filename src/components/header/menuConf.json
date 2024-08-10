@@ -1,0 +1,87 @@
+{
+    "loanMenuConf": [{
+        "title":"Une dépense imprévue",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènements famillial inatendu ?",
+        "imgPath":"/public/images/depense_imprevue.jpg",
+        "compareLink":"#",
+        "menu":[{
+            "text": "Prêt personnel",
+            "linkHref": "#",
+            "icon": "/public/picto/pret_personnel.png"
+        },
+        {
+            "text": "Réserve d'argent",
+            "linkHref": "#",
+            "icon": "/public/picto/reserve_argent.png"
+        },
+        {
+            "text": "La carte by Cofidis",
+            "linkHref": "#",
+            "icon": "/public/picto/carte_assurance_gold.png"
+        }]
+    },
+    {
+        "title":"Un projet spécifique",
+        "description":"comme rénover votre maison, acheter la voiture de vos rêves ou faire le tour du monde ?",
+        "imgPath":"/public/images/projet_specifique.jpg",
+        "compareLink":"#",
+        "menu":[{
+            "text": "Prêt voiture",
+            "linkHref": "#",
+            "icon": "/public/picto/pret_voiture.png"
+        },
+        {
+            "text": "Prêt travaux",
+            "linkHref": "#",
+            "icon": "/public/picto/pret_travaux.png"
+        },
+        {
+            "text": "La carte assurance Gold",
+            "linkHref": "#",
+            "icon": "/public/picto/carte_assurance_gold.png"
+        },
+        {
+            "text": "Regroupement de crédit",
+            "linkHref": "#",
+            "icon": "/public/picto/regroupement_credit.png"
+        }]
+    }],
+    "insuranceMenuConf": [{
+        "title":"Assurance garantie de Solde Restant",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?",
+        "imgPath":"/public/picto/carte_assurance_gold.png",
+        "linkHref":"#"
+    },
+    {
+        "title":"Assurance perte d'emploi et ITT",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?",
+        "imgPath":"/public/picto/carte_assurance_gold.png",
+        "linkHref":"#"
+    },
+    {
+        "title":"Assurance décès et invalidité",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?",
+        "imgPath":"/public/picto/carte_assurance_gold.png",
+        "linkHref":"#"
+    }],
+    "whoWeAre": [{
+        "title":"Les + de Cofidis",
+        "description":"Depuis 1985, Cofidis est le spécialiste des solutions de crédit et d'assurance pour les particuliers.",
+        "linkHref":"#"
+    },
+    {
+        "title":"Nos partenaires",
+        "description":"Depuis 1985, Cofidis est le spécialiste des solutions de crédit et d'assurance pour les particuliers.",
+        "linkHref":"#"
+    },
+    {
+        "title":"Cofidis sponsorise",
+        "description":"Depuis 1985, Cofidis est le spécialiste des solutions de crédit et d'assurance pour les particuliers.",
+        "linkHref":"#"
+    },
+    {
+        "title":"Cofidis recrute",
+        "description":"Depuis 1985, Cofidis est le spécialiste des solutions de crédit et d'assurance pour les particuliers.",
+        "linkHref":"#"
+    }]
+}
