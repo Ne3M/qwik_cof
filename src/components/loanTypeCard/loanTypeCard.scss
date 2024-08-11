@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 992px) {
+  @media (min-width: 769px) {
     padding: 32px 40px;
     flex-direction: row;
     align-items: center;
@@ -84,7 +84,7 @@
       background-image: url('../../media/svg/regroupement_credit.svg');
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 769px) {
       font-size: 20px;
       line-height: 26px;
       display: inline;
@@ -103,7 +103,7 @@
     font-weight: 400;
     margin-top: 16px;
 
-    @media (min-width: 992px) {
+    @media (min-width: 769px) {
       font-size: 16px;
       line-height: 24px;
       margin-top: 0;
@@ -116,7 +116,7 @@
     gap: 16px;
     flex-direction: column;
 
-    @media (min-width: 992px) {
+    @media (min-width: 769px) {
       margin-top: 0;
       flex: 2;
       gap: 8px;
@@ -127,7 +127,7 @@
       align-items: center;
       gap: 14px;
 
-      @media (min-width: 992px) {
+      @media (min-width: 769px) {
         gap: 10px;
       }
 
@@ -136,7 +136,7 @@
         line-height: 20px;
         font-weight: 400;
 
-        @media (min-width: 992px) {
+        @media (min-width: 769px) {
           font-size: 18px;
           line-height: 24px;
         }
@@ -147,7 +147,7 @@
       fill: #D0103A;
       flex-shrink: 0;
       
-      @media (min-width: 992px) {
+      @media (min-width: 769px) {
         height: 24px;
         fill: #0F0F0F;
       }
@@ -163,8 +163,9 @@
     line-height: 18px;
     font-weight: 600;
     margin: 32px auto 0;
+    cursor: pointer;
 
-    @media (min-width: 992px) {
+    @media (min-width: 769px) {
       margin: 0;
       font-size: 16px;
       line-height: 24px;

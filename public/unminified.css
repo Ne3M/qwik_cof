@@ -147,7 +147,7 @@ textarea {
 body {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    padding: 1.5rem 2rem;
+    /*padding: 1.5rem 2rem;*/
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     display: block;

@@ -3,7 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 
 // import { Header } from "~/components/header/header";
 // import { ThemeProvider } from "~/components/theme/themeProvider";
-import PageOurLoansLayout from "~/layouts/pageOurLoans.layout";
+import { PageOurLoansLayout } from "~/layouts/pageOurLoans.layout";
 
 
 export default component$(() => {
