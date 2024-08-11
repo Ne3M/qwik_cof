@@ -1,0 +1,69 @@
+.loan-solutions {
+  background-color: #FDF8EC;
+  padding: 24px;
+
+  &__catchphrase {
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    display: block;
+
+    @media (min-width: 769px) {
+      font-size: 50px;
+      line-height: 56px;
+      max-width: 900px;
+    }
+  }
+
+  &__need {
+    color: #D0103A;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 48px;
+
+    @media (min-width: 769px) {
+      font-size: 28px;
+      line-height: 36px;
+      margin-top: 80px;
+    }
+  }
+
+  &__select {
+    margin-top: 32px;
+
+    @media (min-width: 769px) {
+      margin-top: 48px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 48px;
+
+    @media (min-width: 769px) {
+      font-size: 34px;
+      line-height: 46px;
+      margin-top: 80px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    @media (min-width: 769px) {
+      margin-top: 80px;
+      gap: 24px;
+    }
+  }
+}
