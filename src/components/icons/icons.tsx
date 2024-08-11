@@ -38,6 +38,12 @@ export const Icons = component$(() => {
             <path d="M31 17L17 31M17 17L31 31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
+        <svg id="menu_24px"  viewBox="0 0 24 24" fill="none">
+            <path d="M20 12L10 12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 5L4 5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 19L4 19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
 
     </svg>
 });
