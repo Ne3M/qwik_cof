@@ -1,6 +1,6 @@
 
 import { component$, useContext, useSignal, $, useStylesScoped$ } from "@builder.io/qwik";
-import { ThemeContext } from "../../root"
+import { ThemeContext, LangContext, MenuMobileContext } from "../../root"
 import { MenuLayer } from "./layers/MenuLayer"
 import { LoanLayer } from "./layers/LoanLayer"
 import { SimpleLayer } from "./layers/SimpleLayer"
@@ -12,8 +12,9 @@ import menuConf from "./menuConf.json"
 export const Header = component$(() => {
     // useStylesScoped$(styles);
 
-    const menuMobileOpen = useSignal(true);
     const theme = useContext(ThemeContext);
+    const lang = useContext(LangContext);
+    const menuMobileOpen = useContext(MenuMobileContext);
 
     const handleMobileNavOpening = $((e: Event) => {
         menuMobileOpen.value = !menuMobileOpen.value
@@ -33,7 +34,7 @@ export const Header = component$(() => {
     });
 
     return <>
-        <header class={`main-header ${menuMobileOpen.value ? 'main-header--nav-mobile-opened': ''}`}>
+        <header class={`main-header`}>
             <aside class="preheader">
                 <div class="preheader__credit-warning">
                     <svg class="preheader__credit-warning-icon" width="25" height="24" aria-hidden="true">
@@ -42,11 +43,11 @@ export const Header = component$(() => {
                     Attention, emprunter de l'argent coûte aussi de l'argent
                 </div>
                 <div class="preheader__secondary-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Espace professionnels</a>
+                    <a href="#" class="u-hidden-mobile" target="_blank" rel="noopener noreferrer">Espace professionnels</a>
                     <span class="preheader__lang-selector">
-                        <a href="#">FR</a>
+                        <a href="#" class={lang.value == "fr" ? 'u-font-semibold': ''}>FR</a>
                         |
-                        <a href="#">NL</a>
+                        <a href="#" class={lang.value == "nl" ? 'u-font-semibold': ''}>NL</a>
                     </span>
                     <button class="button button--theme" onClick$={() => theme.value = theme.value == 'dark' ? 'light':'dark' }>☀️ 🌒</button>
                 </div>
@@ -55,7 +56,7 @@ export const Header = component$(() => {
                 <h1 class="main-nav__logo"><img src="/logo.svg" alt="Cofidis" width={175} height={113} /></h1>
                 
                 <button class="main-nav__nav-mobile-btn" onClick$={handleMobileNavOpening}>
-                    {menuMobileOpen.value ?
+                    {menuMobileOpen.value === true ?
                         <svg class="main-nav__nav-mobile-icon" width="40" height="40" aria-hidden="true">
                             <use href="#close_48px"></use>
                         </svg>  
@@ -69,17 +70,37 @@ export const Header = component$(() => {
                 <ul class="main-nav__links">
                     <li>
                         <button class="main-nav__link" onClick$={handleLayerOpening}> 
-                            Nos prêts
+                            <span>Nos prêts</span>
                             <svg class="main-nav__link-icon main-nav__link-chevron" width="25" height="24" aria-hidden="true">
                                 <use href="#chevron_25px"></use>
                             </svg>
                         </button>
                         <MenuLayer>
                             <div class="menu-layer__title" q:slot="title">
-                                <strong class="u-font-bold u-font-34">Simplifier vos dépenses avec nos solutions de financement</strong>
-                                <p class="u-font-18">Votre besoin concerne :</p>
+                                <strong>Simplifier vos dépenses avec nos solutions de financement</strong>
+                                <p class="menu-layer__subtitle">Votre besoin concerne :</p>
                             </div>
                             <ul q:slot="items">
+                            {menuConf.loanMenuConf.map((loanItem, i) => 
+                                    <LoanLayer 
+                                        key={i}
+                                        title={loanItem.title}
+                                        description={loanItem.description}
+                                        imgPath={loanItem.imgPath}
+                                        compareLink={loanItem.compareLink}
+                                        menu={loanItem.menu}
+                                    ></LoanLayer>
+                                )}
+                                {menuConf.loanMenuConf.map((loanItem, i) => 
+                                    <LoanLayer 
+                                        key={i}
+                                        title={loanItem.title}
+                                        description={loanItem.description}
+                                        imgPath={loanItem.imgPath}
+                                        compareLink={loanItem.compareLink}
+                                        menu={loanItem.menu}
+                                    ></LoanLayer>
+                                )}
                                 {menuConf.loanMenuConf.map((loanItem, i) => 
                                     <LoanLayer 
                                         key={i}
@@ -95,14 +116,14 @@ export const Header = component$(() => {
                     </li>
                     <li>
                         <button class="main-nav__link" onClick$={handleLayerOpening}>
-                            Nos assurances
+                        <span>Nos assurances</span>
                             <svg class="main-nav__link-icon main-nav__link-chevron" width="25" height="24" aria-hidden="true">
                                 <use href="#chevron_25px"></use>
                             </svg>
                         </button>
                         <MenuLayer>
                             <div class="menu-layer__title" q:slot="title">
-                                <strong class="u-font-bold u-font-34">Votre bouclier financier face aux aléas de la vie</strong>
+                                <strong>Votre bouclier financier face aux aléas de la vie</strong>
                                 <p>
                                     <a href="#" class="button button--secondary">Voir toutes nos offres</a>
                                 </p>
@@ -122,14 +143,14 @@ export const Header = component$(() => {
                     </li>
                     <li>
                         <button class="main-nav__link" onClick$={handleLayerOpening}>
-                            Qui sommes-nous ?
+                            <span>Qui sommes-nous ?</span>
                             <svg class="main-nav__link-icon main-nav__link-chevron" aria-hidden="true">
                                 <use href="#chevron_25px"></use>
                             </svg>
                         </button>
                         <MenuLayer>
                             <div class="menu-layer__title" q:slot="title">
-                                <strong class="u-font-bold  u-font-34">Nos experts du crédit vous accompagne depuis plus de 30 ans</strong>
+                                <strong>Nos experts du crédit vous accompagne depuis plus de 30 ans</strong>
                                 <p>
                                     <a href="#" class="button button--primary">En savoir plus sur Cofidis</a>
                                 </p>
@@ -148,7 +169,7 @@ export const Header = component$(() => {
                     </li>
                     <li>
                         <a href="#" class="main-nav__link">
-                            Le blog
+                            <span>Le blog</span>
                         </a>
                     </li>
                     <li class="u-hidden-desk">

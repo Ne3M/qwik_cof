@@ -48,19 +48,19 @@
     }],
     "insuranceMenuConf": [{
         "title":"Assurance garantie de Solde Restant",
-        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familial inattendu ?",
         "imgPath":"/public/picto/carte_assurance_gold.png",
         "linkHref":"#"
     },
     {
         "title":"Assurance perte d'emploi et ITT",
-        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familial inattendu ?",
         "imgPath":"/public/picto/carte_assurance_gold.png",
         "linkHref":"#"
     },
     {
         "title":"Assurance décès et invalidité",
-        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?",
+        "description":"comme des frais médicaux, des réparations importantes ou encore un évènement familial inattendu ?",
         "imgPath":"/public/picto/carte_assurance_gold.png",
         "linkHref":"#"
     }],

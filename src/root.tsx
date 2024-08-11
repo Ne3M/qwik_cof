@@ -18,6 +18,13 @@ import {
 export const ThemeContext = createContextId<Signal<string>>(
   'docs.theme-context'
 );
+export const LangContext = createContextId<Signal<string>>(
+  'docs.lang-context'
+);
+export const MenuMobileContext = createContextId<Signal<boolean>>(
+  'docs.menu-mobile-context'
+);
+
 
 
 export default component$(() => {
@@ -29,7 +36,11 @@ export default component$(() => {
    */
 
   const theme = useSignal('light');
+  const lang = useSignal('fr');
+  const menuMobileOpen = useSignal(false);
   useContextProvider(ThemeContext, theme);
+  useContextProvider(LangContext, lang);
+  useContextProvider(MenuMobileContext, menuMobileOpen);
 
   return (
     <QwikCityProvider>
@@ -50,7 +61,7 @@ export default component$(() => {
         )}
         <RouterHead />
       </head>
-      <body lang="fr" class={theme.value}>
+      <body lang={lang.value} class={`main-header ${theme.value} ${menuMobileOpen.value ? 'main-header--nav-mobile-opened': ''}`}>
         <RouterOutlet />
         
         <Icons />

@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
 import { Header } from "../components/header/header";
-import { ThemeProvider } from "../components/theme/themeProvider";
 
 
 export default component$(() => {
