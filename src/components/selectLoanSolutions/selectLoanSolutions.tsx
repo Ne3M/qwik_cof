@@ -38,7 +38,7 @@ export const SelectLoanSolutions = component$((props: SelectLoanSolutionsProps) 
       <div class="select-loan-solutions__cards">
         <div class="select-loan-solutions__cards-wrapper">
           <div class={`select-loan-solutions__cards-wrapper-item ${leftActive ? 'active' : ''}`}>
-            <div class="select-loan-solutions__cards-item" role="button" onClick$={handleClickUnexpectedExpense}>
+            <button class="select-loan-solutions__cards-item" onClick$={handleClickUnexpectedExpense}>
               <div class="select-loan-solutions__cards-crop">
                 <ImgUnexpectedExpense alt="" />
               </div>
@@ -47,10 +47,10 @@ export const SelectLoanSolutions = component$((props: SelectLoanSolutionsProps) 
                 <p>comme des frais médicaux, des réparations importantes ou encore un évènement familiale inattendu ?</p>
                 {leftActive && (<ArrowIcon class="select-loan-solutions__cards-icon" />)}
               </div>
-            </div>
+            </button>
           </div>
           <div class={`select-loan-solutions__cards-wrapper-item ${!leftActive ? 'active' : ''}`}>
-            <div class="select-loan-solutions__cards-item" role="button" onClick$={handleClickSpecificProject}>
+            <button class="select-loan-solutions__cards-item" onClick$={handleClickSpecificProject}>
               <div class="select-loan-solutions__cards-crop">
                 <ImgSpecificProject alt="" />
               </div>
@@ -59,7 +59,7 @@ export const SelectLoanSolutions = component$((props: SelectLoanSolutionsProps) 
                 <p>comme rénover votre maison, acheter une voiture ou faire le tour du monde ?</p>
                 {!leftActive && (<ArrowIcon class="select-loan-solutions__cards-icon" />)}
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </div>

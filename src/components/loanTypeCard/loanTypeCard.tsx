@@ -30,7 +30,7 @@ export const LoanTypeCard = component$((props: LoanTypeCardProps) => {
           )
         })}
       </ul>
-      <button class="loan-type-card__button">En savoir plus</button>
+      <a href="#" class="loan-type-card__button">En savoir plus</a>
     </div>
   )
 })
