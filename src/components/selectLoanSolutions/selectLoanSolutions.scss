@@ -1,0 +1,219 @@
+.select-loan-solutions {
+  position: relative;
+  min-height: 340px;
+  max-width: 340px;
+  margin: 32px auto 20px;
+
+  @media (min-width: 769px) {
+    max-width: 100%;
+    margin: 0 0 80px;
+  }
+
+  &__switch {
+    position: absolute;
+    top: -16px;
+    z-index: 2;
+    width: 100%;
+    opacity: 1;
+    transition: all 0.2s;
+    transition-behavior: allow-discrete;
+
+    @media (min-width: 769px) {
+      display: none;
+      opacity: 0;
+    }
+
+    &-wrapper {
+      background-color: #FFFFFF;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 104px;
+      width: 100%;
+      max-width: 340px;
+      min-height: 72px;
+      display: flex;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        background-color: #FCD331;
+        width: calc(50% - 8px);
+        height: calc(100% - 16px);
+        border-radius: 102px;
+        transition: left ease-in .2s;
+      }
+
+      &.left {
+        &::after {
+          left: 8px;
+        }
+      }
+
+      &.right {
+        &::after {
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    width: calc(50% - 8px);
+    height: calc(100% - 16px);
+    z-index: 1;
+    cursor: pointer;
+    padding: 0 16px;
+
+    &:first-child {
+      left: 8px;
+    }
+
+    &:last-child {
+      right: 8px;
+    }
+
+    &:disabled {
+      color: inherit;
+      cursor: default;
+    }
+  }
+
+  &__cards {
+    position: absolute;
+    width: 100%;
+
+    @media (min-width: 769px) {
+      position: initial;
+    }
+
+    &-wrapper {
+      position: relative;
+
+      @media (min-width: 769px) {
+        position: initial;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+      }
+
+      &-item {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.2s;
+        width: 100%;
+        max-width: 340px;
+
+        @media (min-width: 769px) {
+          position: initial;
+          opacity: 1;
+          max-width: 310px;
+        }
+
+        &.active {
+          opacity: 1;
+          z-index: 1;
+
+          strong {
+            color: #D0103A;
+
+          }
+        }
+      }
+    }
+
+    &-item {
+      box-shadow: 0 20px 40px 0 #E1E1E14A, 0 5px 40px 0 #E1E1E18F;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 340px;
+      max-height: 340px;
+      overflow: hidden;
+      position: relative;
+
+      @media (min-width: 769px) {
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        max-width: 310px;
+        min-height: 480px;
+        background-color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+
+    @media (min-width: 769px) {
+      &-crop {
+        max-height: 230px;
+        overflow: hidden;
+
+        img {
+          margin-top: -40px;
+        }
+      }
+    }
+
+    &-text {
+      position: absolute;
+      padding: 12px 16px;
+      bottom: 0;
+      background-color: #FDF8EC;
+      width:calc(100% - 32px);
+      box-sizing: border-box;
+      left: 16px;
+      border-radius: 16px;
+      bottom: 16px;
+      text-align: center;
+
+      @media (min-width: 769px) {
+        position: initial;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+      }
+      
+      strong {
+        display: none;
+        font-size: 22px;
+        line-height: 24px;
+        transition: color 0.2s;
+
+        @media (min-width: 769px) {
+          display: block;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 21px;
+
+        @media (min-width: 769px) {
+          font-size: 18px;
+          line-height: 24px;
+          margin-top: 24px;
+        }
+      }
+    }
+
+    &-icon {
+      display: none;
+      
+      @media (min-width: 769px) {
+        display: block;
+        margin-top: auto;
+      }
+    }
+  }
+}

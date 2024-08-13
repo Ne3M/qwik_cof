@@ -1,0 +1,175 @@
+.loan-type-card {
+  border-radius: 24px;
+  box-shadow: 0 20px 40px 0 #E1E1E14A, 0 5px 40px 0 #E1E1E18F;
+  background-color: #FFFFFF;
+  padding: 24px;
+  color: #0F0F0F;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1025px) {
+    padding: 32px 40px;
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+    max-width: 1200px;
+
+    &__header {
+      background-repeat: no-repeat;
+      background-size: 66px;
+      background-position: left;
+      padding-left: calc(66px + 56px);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 2;
+
+      &.personal-loan {
+        background-image: url('../../media/svg/pret_personnel.svg');
+      }
+
+      &.money-reserve {
+        background-image: url('../../media/svg/reserve_argent.svg');
+      }
+
+      &.card-cofidis, &.gold-card {
+        background-image: url('../../media/svg/carte_assurance_gold.svg');
+      }
+
+      &.car-loan {
+        background-image: url('../../media/svg/voiture_flat.svg');
+      }
+
+      &.work-loan {
+        background-image: url('../../media/svg/travaux_flat.svg');
+      }
+
+      &.credit-consolidation {
+        background-image: url('../../media/svg/regroupement_credit.svg');
+      }
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    color: #D0103A;
+    background-repeat: no-repeat;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    padding-left: calc(46px + 12px);
+
+    &.personal-loan {
+      background-image: url('../../media/svg/pret_personnel.svg');
+    }
+
+    &.money-reserve {
+      background-image: url('../../media/svg/reserve_argent.svg');
+    }
+
+    &.card-cofidis, &.gold-card {
+      background-image: url('../../media/svg/carte_assurance_gold.svg');
+    }
+
+    &.car-loan {
+      background-image: url('../../media/svg/voiture_flat.svg');
+    }
+
+    &.work-loan {
+      background-image: url('../../media/svg/travaux_flat.svg');
+    }
+
+    &.credit-consolidation {
+      background-image: url('../../media/svg/regroupement_credit.svg');
+    }
+
+    @media (min-width: 1025px) {
+      font-size: 20px;
+      line-height: 26px;
+      display: inline;
+      padding-left: 0;
+      min-height: auto;
+
+      &.personal-loan, &.money-reserve, &.card-cofidis, &.gold-card, &.car-loan, &.work-loan, &.credit-consolidation {
+        background-image: none;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-top: 16px;
+
+    @media (min-width: 1025px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+
+    @media (min-width: 1025px) {
+      margin-top: 0;
+      flex: 2;
+      gap: 8px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      @media (min-width: 1025px) {
+        gap: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+
+        @media (min-width: 1025px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &-icon {
+      fill: #D0103A;
+      flex-shrink: 0;
+      
+      @media (min-width: 1025px) {
+        height: 24px;
+        fill: #0F0F0F;
+      }
+    }
+  }
+
+  &__button {
+    background-color: #D0103A;
+    border-radius: 32px;
+    padding: 12px 40px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    margin: 32px auto 0;
+    cursor: pointer;
+
+    @media (min-width: 1025px) {
+      margin: 0;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

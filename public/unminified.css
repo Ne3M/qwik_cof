@@ -147,16 +147,17 @@ textarea {
 body {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    padding: 1.5rem 2rem;
+    /*padding: 1.5rem 2rem;*/
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     display: block;
     background: var(--color-background);
     color: var(--color-text);
 }
-p {
+/* Obligé ?*/
+/* p {
     margin: 0.5rem 0;
-}
+} */
 a {
     text-decoration: none;
     color: var(--color-text);
